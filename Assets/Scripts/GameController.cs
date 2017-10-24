@@ -48,7 +48,7 @@ public class GameController : MonoBehaviour {
 	public void OnShutterOpen()
 	{
 		uiManager.UpdateShutter (true);
-		uiManager.UpdateTopBar (true);
+		uiManager.ShowTopBar (true);
 	}
 
 	public void OnShutterClose()

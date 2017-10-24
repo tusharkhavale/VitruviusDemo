@@ -65,10 +65,10 @@ public class UIManager : MonoBehaviour {
 	/// <summary>
 	/// Updates the top bar status
 	/// </summary>
-	public void UpdateTopBar(bool value)
+	public void ShowTopBar(bool value)
 	{
 		if (topBar != null)
-			topBar.UpdateTopBar (value);
+			topBar.ShowTopBar (value);
 	}
 
 	/// <summary>
@@ -77,23 +77,17 @@ public class UIManager : MonoBehaviour {
 	/// <param name="gender">Gender.</param>
 	public void OnGenderSelection(EGender gender)
 	{
-		Debug.Log (gender.ToString () + "selected");
+		ShowGenderSelection (false);
+		topBar.SetGenderAvatar (gender);
 	}
 
 	/// <summary>
 	/// Shows the gender selection.
 	/// </summary>
-	public void ShowGenderSelection()
+	/// <param name="value">If set to <c>true</c> value.</param>
+	public void ShowGenderSelection(bool value)
 	{
-		genderSelection.SetActive (true);
-	}
-
-	/// <summary>
-	/// Hides the gneder selection.
-	/// </summary>
-	public void HideGnederSelection()
-	{
-		genderSelection.SetActive (false);
+		genderSelection.SetActive (value);
 	}
 
 	public bool open;
@@ -104,13 +98,13 @@ public class UIManager : MonoBehaviour {
 		{
 			open = false;
 			UpdateShutter (true);
-			UpdateTopBar (true);
+			ShowTopBar (true);
 		}
 
 		if (close) 
 		{
 			close = false;
-			UpdateTopBar (false);
+			ShowTopBar (false);
 			UpdateShutter (false);
 		}
 	}

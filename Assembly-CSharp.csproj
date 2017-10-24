@@ -115,6 +115,7 @@
      <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\VitruviusVideoState.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\UI\GenderSelection.cs" />
+     <Compile Include="Assets\Scripts\UI\GenderSelectionIcon.cs" />
      <Compile Include="Assets\Scripts\UI\Shutter.cs" />
      <Compile Include="Assets\Scripts\UI\ShutterButton.cs" />
      <Compile Include="Assets\Scripts\UI\ShutterDoor.cs" />
