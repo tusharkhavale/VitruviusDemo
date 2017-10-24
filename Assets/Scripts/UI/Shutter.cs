@@ -5,21 +5,23 @@ using UnityEngine;
 public class Shutter : MonoBehaviour {
 
 	private Transform[] shutter;
+	private UIManager uiManager;
 
 	/// <summary>
 	/// Start this instance.
 	/// </summary>
 	void Start()
 	{
-		LoadShutters ();
+		LoadReferences ();
 	}
 
 
 	/// <summary>
 	/// Loads shutters from Hierarchy.
 	/// </summary>
-	private void LoadShutters()
+	private void LoadReferences()
 	{
+		uiManager = transform.GetComponentInParent<UIManager> ();
 		shutter = new Transform[transform.childCount];
 		for (int i = 0; i < shutter.Length; i++)
 			shutter [i] = transform.GetChild (i);
@@ -37,4 +39,11 @@ public class Shutter : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Raises the animation end event.
+	/// </summary>
+	public void OnAnimationEnd()
+	{
+		uiManager.ShowGenderSelection ();
+	}
 }

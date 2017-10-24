@@ -7,6 +7,8 @@ public class UIManager : MonoBehaviour {
 	private Shutter shutter;
 	private ShutterButton btnShutter;
 	private TopBar topBar;
+	private GameObject genderSelection;
+
 
 	/// <summary>
 	/// Returns the instance.
@@ -45,6 +47,7 @@ public class UIManager : MonoBehaviour {
 		shutter = transform.Find ("Shutter").GetComponent<Shutter> ();
 		btnShutter = transform.Find ("ShutterButton").GetComponent<ShutterButton> ();
 		topBar = transform.Find ("TopBar").GetComponent<TopBar> ();
+		genderSelection = transform.Find ("GenderSelection").gameObject;
 	}
 
 	/// <summary>
@@ -54,6 +57,9 @@ public class UIManager : MonoBehaviour {
 	{
 		if (shutter != null)
 			shutter.UpdateShutter (value);
+
+		if (btnShutter != null)
+			btnShutter.gameObject.SetActive (!value);
 	}
 
 	/// <summary>
@@ -66,14 +72,29 @@ public class UIManager : MonoBehaviour {
 	}
 
 	/// <summary>
-	/// Updates the shutter button state.
+	/// Raises the gender selection event.
 	/// </summary>
-	public void UpdateShutterButton(bool value)
+	/// <param name="gender">Gender.</param>
+	public void OnGenderSelection(EGender gender)
 	{
-		if (btnShutter != null)
-			btnShutter.gameObject.SetActive (value);
+		Debug.Log (gender.ToString () + "selected");
 	}
 
+	/// <summary>
+	/// Shows the gender selection.
+	/// </summary>
+	public void ShowGenderSelection()
+	{
+		genderSelection.SetActive (true);
+	}
+
+	/// <summary>
+	/// Hides the gneder selection.
+	/// </summary>
+	public void HideGnederSelection()
+	{
+		genderSelection.SetActive (false);
+	}
 
 	public bool open;
 	public bool close;
@@ -83,7 +104,6 @@ public class UIManager : MonoBehaviour {
 		{
 			open = false;
 			UpdateShutter (true);
-			UpdateShutterButton (false);
 			UpdateTopBar (true);
 		}
 
@@ -92,13 +112,7 @@ public class UIManager : MonoBehaviour {
 			close = false;
 			UpdateTopBar (false);
 			UpdateShutter (false);
-			UpdateShutterButton (true);
 		}
 	}
 
-
-	public void OnHoverButtonClicked(string button)
-	{
-		
-	}
 }

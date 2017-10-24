@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TopBar : MonoBehaviour 
 {
-
+	private UIManager uiManager;
 	private Animator anim;
 
 	/// <summary>
@@ -21,6 +21,7 @@ public class TopBar : MonoBehaviour
 	private void LoadComponents()
 	{
 		anim = transform.GetComponent<Animator> ();
+		uiManager = transform.GetComponentInParent<UIManager> ();
 	}
 
 	/// <summary>
@@ -30,4 +31,5 @@ public class TopBar : MonoBehaviour
 	{
 		anim.SetBool ("open", value);
 	}
+
 }

@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
+using System;
 
-public class ShutterButton : KinectButton
+public class GenderSelection : KinectButton
 {
+
 	/// <summary>
 	/// Raises the hover exit event.
 	/// </summary>
@@ -23,12 +25,17 @@ public class ShutterButton : KinectButton
 	/// </summary>
 	void OnGaugeEnd()
 	{
-		GameController.GetInstance ().OnShutterOpen ();
+		EGender gender = (EGender)Enum.Parse (typeof(EGender), gameObject.name);
+		GameController.GetInstance().OnGenderSelection (gender);
 	}
 
+	/// <summary>
+	/// Editor purpose
+	/// Raises the mouse down event.
+	/// </summary>
 	public void OnMouseDown()
 	{
 		OnGaugeEnd ();
 	}
-		
+
 }
