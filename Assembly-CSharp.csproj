@@ -6,14 +6,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.20506</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
     <ProjectGuid>{6E8A077B-E721-DE88-A2FB-1E7BE1315D62}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>Assets</BaseDirectory>
   </PropertyGroup>
@@ -39,165 +38,169 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.XML" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed\UnityEngine.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Editor\Data\Managed\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BoneMapping.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Anchoring.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\ButtonGauge.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\CameraExtensions.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\CursorInfo.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\FrameView.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\KinectButton.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\KinectUI.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\MeasurementSystem.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Angle Sample\AngleArc.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Angle Sample\AngleSample.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Angle Sample\JointPeak.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Angle Sample\SelectiveAngleHuman.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Avateering Sample\AvateeringSample.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Basketball Spinner Sample\BallSpinning.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Basketball Spinner Sample\BasketballSpinnerSample.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Cursor Sample\CursorSample.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Cursor Sample\DraggableElement.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Cursor Sample\HoverButton.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Cursor Sample\ScrollableList.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Face Mesh Sample\FaceEffectNode.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Face Mesh Sample\FaceEffectNodeManager.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Face Mesh Sample\FaceMeshSample.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Face Points Sample\DetailedFace.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Face Points Sample\FacePointsSample.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Finger Tracking Sample\DepthPointEx.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Finger Tracking Sample\FilterModuleManager.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Finger Tracking Sample\Finger.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Finger Tracking Sample\FingerHelper.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Finger Tracking Sample\FingerTrackingSample.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Finger Tracking Sample\GrahamScan.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Finger Tracking Sample\Hand.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Finger Tracking Sample\HandCollection.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Finger Tracking Sample\HandsController.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Finger Tracking Sample\PointFilter.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Fitting Room Sample\AvatarCloth.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Fitting Room Sample\FittingRoomSample.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Fitting Room Sample\LongSleeve.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Fitting Room Sample\Pants.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Fitting Room Sample\TShirt.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Gestures Sample\GesturesSample.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Green Screen Sample\GreenScreenSample.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Hologram Pyramid Sample\HologramAdjustment.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Hologram Pyramid Sample\HologramPyramidSample.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Jump Sample\JumpFBX.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Jump Sample\JumpSample.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Paper Planes Sample\PaperPlane.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Paper Planes Sample\PaperPlaneSpawner.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Paper Planes Sample\PaperPlanesSample.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Point Cloud Sample\PointCloudSample.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Positioning Assistant Sample\PositioningAssistantSample.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Real Depth Sample\RealDepthSample.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Studio Drummer Sample\Instrument.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Studio Drummer Sample\StudioDrummerSample.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Video Sample\VideoSample.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Stickman.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\StickmanController.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\VitruviusSample.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\VitruviusSensorInfo.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\VitruviusVideo.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\VitruviusVideoSlider.cs" />
-     <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\VitruviusVideoState.cs" />
-     <Compile Include="Assets\Scripts\GameController.cs" />
-     <Compile Include="Assets\Scripts\UI\GenderSelection.cs" />
-     <Compile Include="Assets\Scripts\UI\GenderSelectionIcon.cs" />
-     <Compile Include="Assets\Scripts\UI\Shutter.cs" />
-     <Compile Include="Assets\Scripts\UI\ShutterButton.cs" />
-     <Compile Include="Assets\Scripts\UI\ShutterDoor.cs" />
-     <Compile Include="Assets\Scripts\UI\TopBar.cs" />
-     <Compile Include="Assets\Scripts\UI\UIManager.cs" />
-     <Compile Include="Assets\Scripts\Utils\AppConstants.cs" />
-     <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\ViewModel\left.p.txt" />
-     <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\EvalModel\right.p.txt" />
-     <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\EvalModel\right.p.txt" />
-     <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\WholeHeadModel\FullHeadMaskVertexCorrespondence.txt" />
-     <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\ViewModel\front.p.txt" />
-     <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\EvalModel\Front.p.txt" />
-     <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\MouthModel\lopen.p.txt" />
-     <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\ViewModel\right.p.txt" />
-     <None Include="Assets\LightBuzz.Vitruvius\Models\Shaders\Mobile-XRay Effect.shader" />
-     <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\EvalModel\Front.p.txt" />
-     <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\AAMModel\Map2D3D_HRP.txt" />
-     <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\EvalModel\left.p.txt" />
-     <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\MouthModel\close.p.txt" />
-     <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\MouthModel\MeanShapes.txt" />
-     <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\MouthModel\lopen.p.txt" />
-     <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\ViewModel\right.p.txt" />
-     <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\ViewModel\front.p.txt" />
-     <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\SkintoneModel\skintone_shape_classifier.txt" />
-     <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\MouthModel\MeanShapes.txt" />
-     <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\SkintoneModel\skintone_appearance_classifier.txt" />
-     <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\MouthModel\close.p.txt" />
-     <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\EvalModel\left.p.txt" />
-     <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\AAMModel\Map2D3D_F.txt" />
-     <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\AAMModel\Map2D3D_HLP.txt" />
-     <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\ViewModel\left.p.txt" />
-     <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\SkintoneModel\skintone_shape_classifier.txt" />
-     <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\AAMModel\Map2D3D_F.txt" />
-     <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\AAMModel\Map2D3D_HRP.txt" />
-     <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\AAMModel\Map2D3D_HLP.txt" />
-     <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\SkintoneModel\skintone_appearance_classifier.txt" />
-     <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\WholeHeadModel\FullHeadMaskVertexCorrespondence.txt" />
- <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Networking">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TestRunner">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
- </Reference>
- <Reference Include="nunit.framework">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Timeline">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UIAutomation">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.GoogleAudioSpatializer">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.HoloLens">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.SpatialTracking">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="LightBuzz.Vitruvius">
- <HintPath>E:/Git/VitruviusDemo/Assets/LightBuzz.Vitruvius/LightBuzz.Vitruvius.dll</HintPath>
- </Reference>
- <Reference Include="Windows.Kinect">
- <HintPath>E:/Git/VitruviusDemo/Assets/LightBuzz.Vitruvius/Windows.Kinect.dll</HintPath>
- </Reference>
- <Reference Include="LightBuzz.Vitruvius.Unity">
- <HintPath>E:/Git/VitruviusDemo/Assets/Plugins/x86_64/LightBuzz.Vitruvius.Unity.dll</HintPath>
- </Reference>
- <Reference Include="System.Drawing">
- <HintPath>E:/Git/VitruviusDemo/Assets/Plugins/x86_64/System.Drawing.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Users/tusharkh/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Purchasing">
- <HintPath>C:/Users/tusharkh/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
- </Reference>
+    <Compile Include="Assets\BoneMapping.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Anchoring.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\ButtonGauge.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\CameraExtensions.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\CursorInfo.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\FrameView.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\KinectButton.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\KinectUI.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\MeasurementSystem.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Angle Sample\AngleArc.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Angle Sample\AngleSample.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Angle Sample\JointPeak.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Angle Sample\SelectiveAngleHuman.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Avateering Sample\AvateeringSample.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Basketball Spinner Sample\BallSpinning.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Basketball Spinner Sample\BasketballSpinnerSample.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Cursor Sample\CursorSample.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Cursor Sample\DraggableElement.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Cursor Sample\HoverButton.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Cursor Sample\ScrollableList.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Face Mesh Sample\FaceEffectNode.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Face Mesh Sample\FaceEffectNodeManager.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Face Mesh Sample\FaceMeshSample.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Face Points Sample\DetailedFace.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Face Points Sample\FacePointsSample.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Finger Tracking Sample\DepthPointEx.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Finger Tracking Sample\FilterModuleManager.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Finger Tracking Sample\Finger.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Finger Tracking Sample\FingerHelper.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Finger Tracking Sample\FingerTrackingSample.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Finger Tracking Sample\GrahamScan.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Finger Tracking Sample\Hand.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Finger Tracking Sample\HandCollection.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Finger Tracking Sample\HandsController.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Finger Tracking Sample\PointFilter.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Fitting Room Sample\AvatarCloth.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Fitting Room Sample\FittingRoomSample.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Fitting Room Sample\LongSleeve.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Fitting Room Sample\Pants.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Fitting Room Sample\TShirt.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Gestures Sample\GesturesSample.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Green Screen Sample\GreenScreenSample.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Hologram Pyramid Sample\HologramAdjustment.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Hologram Pyramid Sample\HologramPyramidSample.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Jump Sample\JumpFBX.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Jump Sample\JumpSample.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Paper Planes Sample\PaperPlane.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Paper Planes Sample\PaperPlaneSpawner.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Paper Planes Sample\PaperPlanesSample.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Point Cloud Sample\PointCloudSample.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Positioning Assistant Sample\PositioningAssistantSample.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Real Depth Sample\RealDepthSample.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Studio Drummer Sample\Instrument.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Studio Drummer Sample\StudioDrummerSample.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Samples\Video Sample\VideoSample.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\Stickman.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\StickmanController.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\VitruviusSample.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\VitruviusSensorInfo.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\VitruviusVideo.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\VitruviusVideoSlider.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Scripts\VitruviusVideoState.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\UI\CategoryScroller.cs" />
+    <Compile Include="Assets\Scripts\UI\CategorySelection.cs" />
+    <Compile Include="Assets\Scripts\UI\CategorySelectionIcon.cs" />
+    <Compile Include="Assets\Scripts\UI\GenderSelection.cs" />
+    <Compile Include="Assets\Scripts\UI\GenderSelectionIcon.cs" />
+    <Compile Include="Assets\Scripts\UI\Shutter.cs" />
+    <Compile Include="Assets\Scripts\UI\ShutterButton.cs" />
+    <Compile Include="Assets\Scripts\UI\ShutterDoor.cs" />
+    <Compile Include="Assets\Scripts\UI\SpriteManager.cs" />
+    <Compile Include="Assets\Scripts\UI\TopBar.cs" />
+    <Compile Include="Assets\Scripts\UI\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Utils\AppConstants.cs" />
+    <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\ViewModel\left.p.txt" />
+    <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\EvalModel\right.p.txt" />
+    <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\EvalModel\right.p.txt" />
+    <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\WholeHeadModel\FullHeadMaskVertexCorrespondence.txt" />
+    <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\ViewModel\front.p.txt" />
+    <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\EvalModel\Front.p.txt" />
+    <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\MouthModel\lopen.p.txt" />
+    <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\ViewModel\right.p.txt" />
+    <None Include="Assets\LightBuzz.Vitruvius\Models\Shaders\Mobile-XRay Effect.shader" />
+    <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\EvalModel\Front.p.txt" />
+    <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\AAMModel\Map2D3D_HRP.txt" />
+    <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\EvalModel\left.p.txt" />
+    <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\MouthModel\close.p.txt" />
+    <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\MouthModel\MeanShapes.txt" />
+    <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\MouthModel\lopen.p.txt" />
+    <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\ViewModel\right.p.txt" />
+    <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\ViewModel\front.p.txt" />
+    <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\SkintoneModel\skintone_shape_classifier.txt" />
+    <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\MouthModel\MeanShapes.txt" />
+    <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\SkintoneModel\skintone_appearance_classifier.txt" />
+    <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\MouthModel\close.p.txt" />
+    <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\EvalModel\left.p.txt" />
+    <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\AAMModel\Map2D3D_F.txt" />
+    <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\AAMModel\Map2D3D_HLP.txt" />
+    <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\ViewModel\left.p.txt" />
+    <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\SkintoneModel\skintone_shape_classifier.txt" />
+    <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\AAMModel\Map2D3D_F.txt" />
+    <None Include="Assets\Plugins\x86\Face\NuiDatabase\HDFaceTracker\AAMModel\Map2D3D_HRP.txt" />
+    <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\AAMModel\Map2D3D_HLP.txt" />
+    <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\SkintoneModel\skintone_appearance_classifier.txt" />
+    <None Include="Assets\Plugins\x86_64\Face\NuiDatabase\HDFaceTracker\WholeHeadModel\FullHeadMaskVertexCorrespondence.txt" />
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\Networking\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\TestRunner\UnityEngine.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\TestRunner\net35\unity-custom\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Timeline">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\Timeline\RuntimeEditor\UnityEngine.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIAutomation">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\UIAutomation\UnityEngine.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GoogleAudioSpatializer">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\UnityGoogleAudioSpatializer\RuntimeEditor\UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\UnityHoloLens\RuntimeEditor\UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\UnitySpatialTracking\RuntimeEditor\UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="LightBuzz.Vitruvius">
+      <HintPath>E:\Git\VitruviusDemo\Assets\LightBuzz.Vitruvius\LightBuzz.Vitruvius.dll</HintPath>
+    </Reference>
+    <Reference Include="Windows.Kinect">
+      <HintPath>E:\Git\VitruviusDemo\Assets\LightBuzz.Vitruvius\Windows.Kinect.dll</HintPath>
+    </Reference>
+    <Reference Include="LightBuzz.Vitruvius.Unity">
+      <HintPath>E:\Git\VitruviusDemo\Assets\Plugins\x86_64\LightBuzz.Vitruvius.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>E:\Git\VitruviusDemo\Assets\Plugins\x86_64\System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>C:\Users\tusharkh\AppData\LocalLow\Unity\cache\packages\packages.unity.com\com.unity.analytics%401.0.1\UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>C:\Users\tusharkh\AppData\LocalLow\Unity\cache\packages\packages.unity.com\com.unity.purchasing%401.0.1\UnityEngine.Purchasing.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -207,5 +210,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  
 </Project>

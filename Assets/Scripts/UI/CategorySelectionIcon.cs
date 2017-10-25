@@ -1,6 +1,8 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class GenderSelectionIcon : KinectButton
+public class CategorySelectionIcon : KinectButton
 {
 	/// <summary>
 	/// Raises the hover exit event.
@@ -23,7 +25,7 @@ public class GenderSelectionIcon : KinectButton
 	/// </summary>
 	void OnGaugeEnd()
 	{
-		transform.GetComponentInParent<TopBar> ().OnClickGenderAvatar ();
+		transform.GetComponentInParent<TopBar> ().OnClickCategory ();
 	}
 
 	/// <summary>
@@ -39,7 +41,8 @@ public class GenderSelectionIcon : KinectButton
 	/// </summary>
 	public void OnAnimationEnd()
 	{
-		transform.GetComponentInParent<TopBar> ().OnGenderAnimationEnd ();
+		transform.GetComponentInParent<TopBar> ().OnCategoryAnimationEnd();
 	}
 
 }
+

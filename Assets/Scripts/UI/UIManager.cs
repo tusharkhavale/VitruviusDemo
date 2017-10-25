@@ -8,7 +8,8 @@ public class UIManager : MonoBehaviour {
 	private ShutterButton btnShutter;
 	private TopBar topBar;
 	private GameObject genderSelection;
-
+	private GameObject categoryScroller;
+	private SpriteManager spriteManager;
 
 	/// <summary>
 	/// Returns the instance.
@@ -48,6 +49,8 @@ public class UIManager : MonoBehaviour {
 		btnShutter = transform.Find ("ShutterButton").GetComponent<ShutterButton> ();
 		topBar = transform.Find ("TopBar").GetComponent<TopBar> ();
 		genderSelection = transform.Find ("GenderSelection").gameObject;
+		categoryScroller = transform.Find ("CategoryScroller").gameObject;
+		spriteManager = transform.GetComponent<SpriteManager> ();
 	}
 
 	/// <summary>
@@ -88,6 +91,35 @@ public class UIManager : MonoBehaviour {
 	public void ShowGenderSelection(bool value)
 	{
 		genderSelection.SetActive (value);
+	}
+
+	/// <summary>
+	/// Raises the category selection event.
+	/// </summary>
+	/// <param name="category">Category.</param>
+	public void OnCategorySelection(ECategory category)
+	{
+		ShowCategorySelector (false);
+		topBar.SetCategoryDisplay (category);
+	}
+
+	/// <summary>
+	/// Shows the category selector.
+	/// </summary>
+	/// <param name="value">If set to <c>true</c> value.</param>
+	public void ShowCategorySelector(bool value)
+	{
+		categoryScroller.SetActive (value);
+	}
+
+	/// <summary>
+	/// Gets the sprite.
+	/// </summary>
+	/// <returns>The sprite.</returns>
+	/// <param name="category">Category.</param>
+	public Sprite GetSprite(ECategory category)
+	{
+		return spriteManager.GetSprite (category);
 	}
 
 	public bool open;
