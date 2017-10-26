@@ -44,6 +44,7 @@ public class Shutter : MonoBehaviour {
 	/// </summary>
 	public void OnAnimationEnd()
 	{
-		uiManager.ShowGenderSelection (true);
+//		uiManager.ShowGenderSelection (true);
+		uiManager.ShowStartPage(true);
 	}
 }

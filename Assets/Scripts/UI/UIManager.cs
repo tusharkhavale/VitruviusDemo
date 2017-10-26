@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour {
 	private GameObject genderSelection;
 	private GameObject categoryScroller;
 	private SpriteManager spriteManager;
+	private GameObject startPage;
 
 	/// <summary>
 	/// Returns the instance.
@@ -51,6 +52,7 @@ public class UIManager : MonoBehaviour {
 		genderSelection = transform.Find ("GenderSelection").gameObject;
 		categoryScroller = transform.Find ("CategoryScroller").gameObject;
 		spriteManager = transform.GetComponent<SpriteManager> ();
+		startPage = transform.Find ("StartPage").gameObject;
 	}
 
 	/// <summary>
@@ -120,6 +122,15 @@ public class UIManager : MonoBehaviour {
 	public Sprite GetSprite(ECategory category)
 	{
 		return spriteManager.GetSprite (category);
+	}
+
+	/// <summary>
+	/// Shows the StartPage.
+	/// </summary>
+	/// <param name="value">If set to <c>true</c> value.</param>
+	public void ShowStartPage(bool value)
+	{
+		startPage.SetActive (value);
 	}
 
 	public bool open;
