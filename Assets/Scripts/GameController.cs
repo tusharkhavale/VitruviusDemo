@@ -80,4 +80,12 @@ public class GameController : MonoBehaviour {
 		Debug.Log ("Category is : " + category);
 		uiManager.OnCategorySelection (category);
 	}
+
+	/// <summary>
+	/// Raises the start gesture recognized event.
+	/// </summary>
+	public void OnStartGestureRecognized()
+	{
+		uiManager.OnStartGestureRecognized ();
+	}
 }

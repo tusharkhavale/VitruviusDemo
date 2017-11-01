@@ -122,6 +122,7 @@
     <Compile Include="Assets\Scripts\UI\ShutterButton.cs" />
     <Compile Include="Assets\Scripts\UI\ShutterDoor.cs" />
     <Compile Include="Assets\Scripts\UI\SpriteManager.cs" />
+    <Compile Include="Assets\Scripts\UI\StartPage.cs" />
     <Compile Include="Assets\Scripts\UI\TopBar.cs" />
     <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\Utils\AppConstants.cs" />

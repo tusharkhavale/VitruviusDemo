@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour {
 	private ShutterButton btnShutter;
 	private TopBar topBar;
 	private GameObject genderSelection;
-	private GameObject categoryScroller;
+	private GameObject categorySelector;
 	private SpriteManager spriteManager;
 	private GameObject startPage;
 
@@ -50,7 +50,7 @@ public class UIManager : MonoBehaviour {
 		btnShutter = transform.Find ("ShutterButton").GetComponent<ShutterButton> ();
 		topBar = transform.Find ("TopBar").GetComponent<TopBar> ();
 		genderSelection = transform.Find ("GenderSelection").gameObject;
-		categoryScroller = transform.Find ("CategoryScroller").gameObject;
+		categorySelector = transform.Find ("CategorySelector").gameObject;
 		spriteManager = transform.GetComponent<SpriteManager> ();
 		startPage = transform.Find ("StartPage").gameObject;
 	}
@@ -111,7 +111,7 @@ public class UIManager : MonoBehaviour {
 	/// <param name="value">If set to <c>true</c> value.</param>
 	public void ShowCategorySelector(bool value)
 	{
-		categoryScroller.SetActive (value);
+		categorySelector.SetActive (value);
 	}
 
 	/// <summary>
@@ -131,6 +131,15 @@ public class UIManager : MonoBehaviour {
 	public void ShowStartPage(bool value)
 	{
 		startPage.SetActive (value);
+	}
+
+	/// <summary>
+	/// Raises the start gesture recognized event.
+	/// </summary>
+	public void OnStartGestureRecognized()
+	{
+		ShowStartPage (false);
+		ShowGenderSelection (true);
 	}
 
 	public bool open;
