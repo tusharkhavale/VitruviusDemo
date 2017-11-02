@@ -36,6 +36,7 @@ public class TopBar : MonoBehaviour
 	/// </summary>
 	public void ShowTopBar(bool value)
 	{
+		HideGenderAvatar ();
 		anim.SetBool ("open", value);
 	}
 
@@ -67,6 +68,20 @@ public class TopBar : MonoBehaviour
 				femaleAvatar.SetActive (true);
 				break;
 		}
+
+		maleAvatar.GetComponent<Animator> ().enabled = true;
+		femaleAvatar.GetComponent<Animator> ().enabled = true;
+	}
+
+	/// <summary>
+	/// Hides the gender avatar.
+	/// </summary>
+	/// <returns>The gender avatar.</returns>
+	private void HideGenderAvatar()
+	{
+		maleAvatar.SetActive (false);
+		femaleAvatar.SetActive (false);
+		category.gameObject.SetActive (false); 
 	}
 
 	/// <summary>

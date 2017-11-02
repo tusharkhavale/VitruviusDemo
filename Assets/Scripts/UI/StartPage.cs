@@ -19,7 +19,7 @@ public class StartPage: VitruviusSample {
 
 	void OnDisable()
 	{
-		base.OnApplicationQuit();
+//		base.OnApplicationQuit();
 
 		if (gestureController != null)
 		{

@@ -7,8 +7,8 @@ public class UIManager : MonoBehaviour {
 	private Shutter shutter;
 	private ShutterButton btnShutter;
 	private TopBar topBar;
-	private GameObject genderSelection;
-	private GameObject categorySelector;
+	private GenderSelectionController genderSelection;
+	private CategorySelectionController categorySelector;
 	private SpriteManager spriteManager;
 	private GameObject startPage;
 
@@ -49,8 +49,8 @@ public class UIManager : MonoBehaviour {
 		shutter = transform.Find ("Shutter").GetComponent<Shutter> ();
 		btnShutter = transform.Find ("ShutterButton").GetComponent<ShutterButton> ();
 		topBar = transform.Find ("TopBar").GetComponent<TopBar> ();
-		genderSelection = transform.Find ("GenderSelection").gameObject;
-		categorySelector = transform.Find ("CategorySelector").gameObject;
+		genderSelection = transform.Find ("GenderSelection").gameObject.GetComponent<GenderSelectionController>();
+		categorySelector = transform.Find ("CategorySelector").gameObject.GetComponent<CategorySelectionController>();
 		spriteManager = transform.GetComponent<SpriteManager> ();
 		startPage = transform.Find ("StartPage").gameObject;
 	}
@@ -92,7 +92,8 @@ public class UIManager : MonoBehaviour {
 	/// <param name="value">If set to <c>true</c> value.</param>
 	public void ShowGenderSelection(bool value)
 	{
-		genderSelection.SetActive (value);
+		genderSelection.gameObject.SetActive (value);
+		genderSelection.ShowGenderSelection ();
 	}
 
 	/// <summary>
@@ -111,7 +112,8 @@ public class UIManager : MonoBehaviour {
 	/// <param name="value">If set to <c>true</c> value.</param>
 	public void ShowCategorySelector(bool value)
 	{
-		categorySelector.SetActive (value);
+		categorySelector.gameObject.SetActive (value);
+		categorySelector.ShowCategorySelection ();
 	}
 
 	/// <summary>
