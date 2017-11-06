@@ -22,6 +22,14 @@ public enum ECategory
 	SHORTS_XS = 7,
 }
 
+public enum EGarment
+{
+	ONE,
+	TWO,
+	THREE,
+	FOUR,
+}
+
 public class AppConstants 
 {
 	

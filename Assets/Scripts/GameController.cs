@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour {
 
 	private static GameController instance;
 	private UIManager uiManager; 
+	private ResourceManager resourceManager;
 
 	/// <summary>
 	/// Gets the instance.
@@ -43,6 +44,7 @@ public class GameController : MonoBehaviour {
 	public void LoadReferences()
 	{
 		uiManager = UIManager.GetInstance ();
+		resourceManager = ResourceManager.GetInstance ();
 	}
 
 	/// <summary>
@@ -72,13 +74,30 @@ public class GameController : MonoBehaviour {
 	}
 
 	/// <summary>
+	/// Raises the garment selection event.
+	/// </summary>
+	/// <param name="button">Button.</param>
+	public void OnGarmentSelection(EGarment button)
+	{
+		
+	}
+
+	/// <summary>
 	/// Raises the category selection event.
 	/// </summary>
 	/// <param name="category">Category.</param>
 	public void OnCategorySelection(ECategory category)
 	{
-		Debug.Log ("Category is : " + category);
 		uiManager.OnCategorySelection (category);
+	}
+
+	/// <summary>
+	/// Raises the category selection animation end event.
+	/// </summary>
+	public void OnCategorySelectionAnimationEnd()
+	{
+		uiManager.ShowGarmentSelection (true);
+		resourceManager.ShowGarments (true);
 	}
 
 	/// <summary>

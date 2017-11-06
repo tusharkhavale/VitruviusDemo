@@ -131,31 +131,31 @@ public class FittingRoomSample : VitruviusSample
         }
     }
 
-    void OnGUI()
-    {
-        for (int i = 0; i < clothes.Length; i++)
-        {
-            if (!clothes[i].IsInitialized) continue;
-
-            Vector3 clothPosition = Camera.main.WorldToScreenPoint(buttonPositions[i]);
-            clothPosition.y = Screen.height - clothPosition.y;
-
-            Rect rect = new Rect(clothPosition.x, clothPosition.y,
-                buttonSize.x * Screen.width, buttonSize.y * Screen.height);
-            rect.x -= rect.width * 0.5f;
-            rect.y -= rect.height * 0.5f;
-
-            if (GUI.Button(rect, clothes[i].Body.name))
-            {
-                selected[i] = !selected[i];
-
-                if (!selected[i])
-                {
-                    clothes[i].Reset();
-                }
-            }
-        }
-    }
+//    void OnGUI()
+//    {
+//        for (int i = 0; i < clothes.Length; i++)
+//        {
+//            if (!clothes[i].IsInitialized) continue;
+//
+//            Vector3 clothPosition = Camera.main.WorldToScreenPoint(buttonPositions[i]);
+//            clothPosition.y = Screen.height - clothPosition.y;
+//
+//            Rect rect = new Rect(clothPosition.x, clothPosition.y,
+//                buttonSize.x * Screen.width, buttonSize.y * Screen.height);
+//            rect.x -= rect.width * 0.5f;
+//            rect.y -= rect.height * 0.5f;
+//
+//            if (GUI.Button(rect, clothes[i].Body.name))
+//            {
+//                selected[i] = !selected[i];
+//
+//                if (!selected[i])
+//                {
+//                    clothes[i].Reset();
+//                }
+//            }
+//        }
+//    }
 
     #endregion
 
@@ -183,4 +183,6 @@ public class FittingRoomSample : VitruviusSample
     }
 
     #endregion
+
+
 }

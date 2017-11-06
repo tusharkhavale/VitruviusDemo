@@ -113,6 +113,7 @@ public class TopBar : MonoBehaviour
 		category.gameObject.SetActive (false); 
 		category.GetComponent<Image> ().sprite = uiManager.GetSprite (value);
 		category.gameObject.SetActive (true); 
+		category.GetComponent<Animator> ().enabled = true;
 	}
 
 	/// <summary>
@@ -120,7 +121,7 @@ public class TopBar : MonoBehaviour
 	/// </summary>
 	public void OnCategoryAnimationEnd()
 	{
-		
+		GameController.GetInstance ().OnCategorySelectionAnimationEnd ();
 	}
 #endregion
 }

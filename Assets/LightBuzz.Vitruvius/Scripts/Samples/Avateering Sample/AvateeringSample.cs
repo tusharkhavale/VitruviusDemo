@@ -25,7 +25,7 @@ public class AvateeringSample : VitruviusSample
 
     protected override void Awake()
     {
-        base.Awake();
+//        base.Awake();
 
         Avateering.Enable();
 
@@ -44,7 +44,7 @@ public class AvateeringSample : VitruviusSample
 
     protected override void OnApplicationQuit()
     {
-        base.OnApplicationQuit();
+//        base.OnApplicationQuit();
 
         Avateering.Disable();
 

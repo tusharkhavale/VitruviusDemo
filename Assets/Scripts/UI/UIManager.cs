@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour {
 	private TopBar topBar;
 	private GenderSelectionController genderSelection;
 	private CategorySelectionController categorySelector;
+	private GarmentSelectionController garmentSelectionController;
 	private SpriteManager spriteManager;
 	private GameObject startPage;
 
@@ -53,6 +54,7 @@ public class UIManager : MonoBehaviour {
 		categorySelector = transform.Find ("CategorySelector").gameObject.GetComponent<CategorySelectionController>();
 		spriteManager = transform.GetComponent<SpriteManager> ();
 		startPage = transform.Find ("StartPage").gameObject;
+		garmentSelectionController = transform.Find ("GarmentSelector").GetComponent<GarmentSelectionController> ();
 	}
 
 	/// <summary>
@@ -113,7 +115,8 @@ public class UIManager : MonoBehaviour {
 	public void ShowCategorySelector(bool value)
 	{
 		categorySelector.gameObject.SetActive (value);
-		categorySelector.ShowCategorySelection ();
+		if(value)
+			categorySelector.ShowCategorySelection ();
 	}
 
 	/// <summary>
@@ -125,6 +128,28 @@ public class UIManager : MonoBehaviour {
 	{
 		return spriteManager.GetSprite (category);
 	}
+
+
+	/// <summary>
+	/// Shows the garment selection.
+	/// </summary>
+	/// <param name="value">If set to <c>true</c> value.</param>
+	public void ShowGarmentSelection(bool value)
+	{
+		garmentSelectionController.gameObject.SetActive (value);
+		if(value)
+			garmentSelectionController.ShowGarmentSelection ();
+	}
+
+	/// <summary>
+	/// Raises the garment selection event.
+	/// </summary>
+	/// <param name="garment">Garment.</param>
+	public void OnGarmentSelection(EGarment garment)
+	{
+		garmentSelectionController.OnClickButton (garment);
+	}
+
 
 	/// <summary>
 	/// Shows the StartPage.
@@ -142,6 +167,7 @@ public class UIManager : MonoBehaviour {
 	{
 		ShowStartPage (false);
 		ShowGenderSelection (true);
+		ShowCategorySelector (false);
 	}
 
 	public bool open;
