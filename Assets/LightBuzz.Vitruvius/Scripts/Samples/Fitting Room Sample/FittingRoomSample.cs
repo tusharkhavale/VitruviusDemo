@@ -8,15 +8,21 @@ public class FittingRoomSample : VitruviusSample
     #region Variables
 
     BodyWrapper body;
+	AvatarCloth selectedCloth;
 
     public bool useGreenScreen = true;
     public GameObject greenScreenView;
 
-    public AvatarCloth[] clothes = new AvatarCloth[5];
-    [HideInInspector]
-    public bool[] selected;
-    public Vector2[] buttonPositions = new Vector2[5];
-    public Vector2 buttonSize;
+	private static FittingRoomSample instance;
+	public static FittingRoomSample GetInstance()
+	{
+		if (instance != null) 
+		{
+			return instance;
+		}
+		return null;
+	}
+    
 
     #endregion
 
@@ -25,15 +31,8 @@ public class FittingRoomSample : VitruviusSample
     protected override void Awake()
     {
         base.Awake();
-
+		instance = this;
         Avateering.Enable();
-
-        for (int i = 0; i < clothes.Length; i++)
-        {
-            clothes[i].Initialize();
-        }
-
-        selected = new bool[clothes.Length];
     }
 
     protected override void OnApplicationQuit()
@@ -41,11 +40,6 @@ public class FittingRoomSample : VitruviusSample
         base.OnApplicationQuit();
 
         Avateering.Disable();
-
-        for (int i = 0; i < clothes.Length; i++)
-        {
-            clothes[i].Dispose();
-        }
     }
 
     void Update()
@@ -97,11 +91,10 @@ public class FittingRoomSample : VitruviusSample
 
         if (body != null)
         {
-            for (int i = 0; i < selected.Length; i++)
             {
-                if (selected[i])
+				if (selectedCloth != null)
                 {
-                    AvatarCloth cloth = clothes[i];
+					AvatarCloth cloth = selectedCloth;
 
                     Avateering.Update(cloth, body);
 
@@ -124,38 +117,10 @@ public class FittingRoomSample : VitruviusSample
         }
         else
         {
-            for (int i = 0; i < clothes.Length; i++)
-            {
-                clothes[i].Reset();
-            }
+			if(selectedCloth)
+				selectedCloth.Reset ();
         }
     }
-
-//    void OnGUI()
-//    {
-//        for (int i = 0; i < clothes.Length; i++)
-//        {
-//            if (!clothes[i].IsInitialized) continue;
-//
-//            Vector3 clothPosition = Camera.main.WorldToScreenPoint(buttonPositions[i]);
-//            clothPosition.y = Screen.height - clothPosition.y;
-//
-//            Rect rect = new Rect(clothPosition.x, clothPosition.y,
-//                buttonSize.x * Screen.width, buttonSize.y * Screen.height);
-//            rect.x -= rect.width * 0.5f;
-//            rect.y -= rect.height * 0.5f;
-//
-//            if (GUI.Button(rect, clothes[i].Body.name))
-//            {
-//                selected[i] = !selected[i];
-//
-//                if (!selected[i])
-//                {
-//                    clothes[i].Reset();
-//                }
-//            }
-//        }
-//    }
 
     #endregion
 
@@ -184,5 +149,19 @@ public class FittingRoomSample : VitruviusSample
 
     #endregion
 
+	public void SetSelectedCloth( AvatarCloth cloth)
+	{
+		selectedCloth = cloth;
+		selectedCloth.Initialize ();
+	}
+
+	public void ResetSelectedCloth()
+	{
+		AvatarCloth cloth = selectedCloth;
+		selectedCloth = null;
+		cloth.Reset ();
+		cloth.Dispose ();
+		cloth.transform.GetComponentInChildren<Cloth> ().enabled = true;
+	}
 
 }

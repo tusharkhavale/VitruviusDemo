@@ -2,6 +2,13 @@
 
 public class TShirt : AvatarCloth
 {
+
+
+//	void Start()
+//	{
+//		Initialize ();
+//	}
+
     public override void OnUpdate()
     {
         UpdateBone(Avateering.SpineBase);

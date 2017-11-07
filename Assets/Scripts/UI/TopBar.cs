@@ -10,6 +10,7 @@ public class TopBar : MonoBehaviour
 	private GameObject maleAvatar;
 	private GameObject femaleAvatar;
 	private Transform category;
+	private GameObject back;
 
 	/// <summary>
 	/// Start this instance.
@@ -29,6 +30,7 @@ public class TopBar : MonoBehaviour
 		maleAvatar = transform.Find ("MaleAvatar").gameObject;
 		femaleAvatar = transform.Find ("FemaleAvatar").gameObject;
 		category = transform.Find ("Category");
+		back = transform.Find ("Back").gameObject;
 	}
 
 	/// <summary>
@@ -36,7 +38,7 @@ public class TopBar : MonoBehaviour
 	/// </summary>
 	public void ShowTopBar(bool value)
 	{
-		HideGenderAvatar ();
+		HideTopBarButtons ();
 		anim.SetBool ("open", value);
 	}
 
@@ -77,11 +79,12 @@ public class TopBar : MonoBehaviour
 	/// Hides the gender avatar.
 	/// </summary>
 	/// <returns>The gender avatar.</returns>
-	private void HideGenderAvatar()
+	private void HideTopBarButtons()
 	{
 		maleAvatar.SetActive (false);
 		femaleAvatar.SetActive (false);
 		category.gameObject.SetActive (false); 
+		ShowBackButton (false);
 	}
 
 	/// <summary>
@@ -124,4 +127,12 @@ public class TopBar : MonoBehaviour
 		GameController.GetInstance ().OnCategorySelectionAnimationEnd ();
 	}
 #endregion
+
+	/// <summary>
+	/// Shows the back button.
+	/// </summary>
+	public void ShowBackButton(bool value)
+	{
+		back.SetActive (value);
+	}
 }

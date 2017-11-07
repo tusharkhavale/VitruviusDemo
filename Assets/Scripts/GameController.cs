@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour {
 	private static GameController instance;
 	private UIManager uiManager; 
 	private ResourceManager resourceManager;
+	private FittingRoomSample fittingRoomSample;
 
 	/// <summary>
 	/// Gets the instance.
@@ -45,6 +46,7 @@ public class GameController : MonoBehaviour {
 	{
 		uiManager = UIManager.GetInstance ();
 		resourceManager = ResourceManager.GetInstance ();
+		fittingRoomSample = FittingRoomSample.GetInstance ();
 	}
 
 	/// <summary>
@@ -79,7 +81,10 @@ public class GameController : MonoBehaviour {
 	/// <param name="button">Button.</param>
 	public void OnGarmentSelection(EGarment button)
 	{
-		
+//		resourceManager.ShowGarments (false);
+		resourceManager.OnGarmentSelection (button);
+		uiManager.OnGarmentSelection (button);
+
 	}
 
 	/// <summary>
@@ -106,5 +111,14 @@ public class GameController : MonoBehaviour {
 	public void OnStartGestureRecognized()
 	{
 		uiManager.OnStartGestureRecognized ();
+	}
+
+	/// <summary>
+	/// Raises the back button event.
+	/// </summary>
+	public void OnBackButton()
+	{
+		fittingRoomSample.ResetSelectedCloth ();
+		uiManager.OnBackButton ();
 	}
 }

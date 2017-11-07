@@ -68,6 +68,18 @@ public class ResourceManager : MonoBehaviour {
 		go.AddComponent<TShirt> ();	
 	}
 
+	/// <summary>
+	/// Raises the garment selection event.
+	/// </summary>
+	/// <param name="button">Button.</param>
+	public void OnGarmentSelection(EGarment button)
+	{
+		Transform cloth = hanger.transform.Find (button.ToString ());
+		cloth.GetComponentInChildren<Cloth> ().enabled = false;
+		AvatarCloth avatarCloth = cloth.GetComponent<TShirt> ();
+		FittingRoomSample.GetInstance ().SetSelectedCloth (avatarCloth);
+	}
+
 
 
 }

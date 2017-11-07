@@ -25,8 +25,6 @@ public class AvateeringSample : VitruviusSample
 
     protected override void Awake()
     {
-//        base.Awake();
-
         Avateering.Enable();
 
         for (int i = 0; i < stickmen.Length; i++)
@@ -44,8 +42,6 @@ public class AvateeringSample : VitruviusSample
 
     protected override void OnApplicationQuit()
     {
-//        base.OnApplicationQuit();
-
         Avateering.Disable();
 
         for (int i = 0; i < models.Length; i++)

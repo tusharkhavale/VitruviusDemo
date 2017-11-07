@@ -147,7 +147,9 @@ public class UIManager : MonoBehaviour {
 	/// <param name="garment">Garment.</param>
 	public void OnGarmentSelection(EGarment garment)
 	{
-		garmentSelectionController.OnClickButton (garment);
+//		garmentSelectionController.OnClickButton (garment);
+		ShowGarmentSelection(false);
+		topBar.ShowBackButton (true);
 	}
 
 
@@ -169,6 +171,15 @@ public class UIManager : MonoBehaviour {
 		ShowGenderSelection (true);
 		ShowCategorySelector (false);
 	}
+
+	/// <summary>
+	/// Raises the back button event.
+	/// </summary>
+	public void OnBackButton()
+	{
+		ShowGarmentSelection (true);
+	}
+
 
 	public bool open;
 	public bool close;
