@@ -1,29 +1,28 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UI\UIManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\LightBuzz.Vitruvius\Scripts\Samples\Gestures Sample\GesturesSample.cs">
     <Files>
-      <File FileName="Assets\Scripts\UI\ShutterDoor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UI\Shutter.cs" Line="48" Column="31" />
+      <File FileName="Assets\Scripts\GameController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ResourceManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\LightBuzz.Vitruvius\Scripts\Samples\Fitting Room Sample\FittingRoomSample.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\Shutter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\UIManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\GarmentSelectionController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\UI\TopBar.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UI\ShutterButton.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameController.cs" Line="89" Column="41" />
-      <File FileName="Assets\Scripts\UI\UIManager.cs" Line="53" Column="54" />
-      <File FileName="Assets\LightBuzz.Vitruvius\Scripts\Samples\Cursor Sample\ScrollableList.cs" Line="1" Column="1" />
-      <File FileName="Assets\LightBuzz.Vitruvius\Scripts\Samples\Cursor Sample\DraggableElement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UI\CategoryScroller.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UI\CategorySelection.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Utils\AppConstants.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UI\GenderSelection.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UI\SpriteManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UI\CategorySelectionIcon.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\TrialButton.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\GenderSelectionController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\AutoRunButton.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\ScaleButton.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\ScaleBackButton.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\UI\GenderSelectionIcon.cs" Line="1" Column="1" />
-      <File FileName="Assets\LightBuzz.Vitruvius\Scripts\Samples\Gestures Sample\GesturesSample.cs" Line="6" Column="46" />
-      <File FileName="Assets\LightBuzz.Vitruvius\Scripts\VitruviusSample.cs" Line="6" Column="1" />
-      <File FileName="Assets\Scripts\UI\StartPage.cs" Line="77" Column="3" />
+      <File FileName="Assets\LightBuzz.Vitruvius\Scripts\Samples\Gestures Sample\GesturesSample.cs" Line="4" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\tusharkh\Documents\GitHub\VitruviusDemo\Assets\LightBuzz.Vitruvius\Scripts\Samples\Finger Tracking Sample\Finger.cs" line="63" column="1" />
+      <Breakpoint file="C:\Users\tusharkh\Documents\GitHub\VitruviusDemo\Assets\LightBuzz.Vitruvius\Scripts\Samples\Finger Tracking Sample\Finger.cs" line="65" column="13" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

@@ -1,18 +1,31 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DraggableElement : KinectButton
 {
-    public event EventHandler Dragging;
+	private Vector3 position;
+	bool resetPosition = false;
+
+	void OnEnable()
+	{
+		position = transform.position;
+	}
+
+	public void ResetPosition()
+	{
+		resetPosition = true;
+		transform.position = position;
+		Invoke ("DisableResetPosition", 2.0f);
+	}
+
+	void DisableResetPosition()
+	{
+		resetPosition = false;
+	}
 
     protected override void OnDragging()
     {
-        transform.position = cursorInfo.currentPosition;
-        
-        if (Dragging != null)
-        {
-            Dragging.Invoke(this, new EventArgs());
-        }
+		if(!resetPosition)
+			transform.position = cursorInfo.currentPosition;
     }
 
     protected override void OnOutsideDragging()

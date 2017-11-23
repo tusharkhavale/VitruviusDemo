@@ -4,13 +4,13 @@ using System;
 
 public class GarmentButton : KinectButton
 {
-
 	/// <summary>
 	/// Raises the hover exit event.
 	/// </summary>
 	protected override void OnHoverExit()
 	{
 		KinectUI.Instance.HideGauge(cursorInfo);
+		 
 	}
 
 	/// <summary>

@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/BoysRoom.unity
+    guid: 105facbb42ad64d40bf73685b989ec83
+  - enabled: 0
+    path: Assets/Scenes/GirlsRoom.unity
+    guid: 859617d7089bfe64fa665fb8035bc254

@@ -4,6 +4,12 @@ public class LongSleeve : AvatarCloth
 {
     public override void OnUpdate()
     {
+
+		if (!updateJoints) 
+		{
+			return;
+		}
+
         UpdateBone(Avateering.SpineBase);
         UpdateBone(Avateering.SpineMid);
         UpdateBone(Avateering.Neck);

@@ -8,6 +8,10 @@ public class GameController : MonoBehaviour {
 	private UIManager uiManager; 
 	private ResourceManager resourceManager;
 	private FittingRoomSample fittingRoomSample;
+	private bool shutterState;
+	private EGender currentGender;
+
+
 
 	/// <summary>
 	/// Gets the instance.
@@ -21,6 +25,17 @@ public class GameController : MonoBehaviour {
 		}
 		return null;
 	}
+
+	/// <summary>
+	/// Gets or sets the gender.
+	/// </summary>
+	/// <value>The gender.</value>
+	public EGender Gender
+	{
+		get{return currentGender;}
+		set{currentGender = value;}
+	}
+
 
 	/// <summary>
 	/// Awake this instance.
@@ -47,6 +62,19 @@ public class GameController : MonoBehaviour {
 		uiManager = UIManager.GetInstance ();
 		resourceManager = ResourceManager.GetInstance ();
 		fittingRoomSample = FittingRoomSample.GetInstance ();
+		fittingRoomSample.AddDelegate (this.OnBodyFrameReceived);
+	}
+
+	/// <summary>
+	/// Raises the body frame received event.
+	/// </summary>
+	public void OnBodyFrameReceived()
+	{
+		if (!shutterState) 
+		{
+			shutterState = true;
+			OnShutterOpen ();
+		}
 	}
 
 	/// <summary>
@@ -55,7 +83,7 @@ public class GameController : MonoBehaviour {
 	public void OnShutterOpen()
 	{
 		uiManager.UpdateShutter (true);
-		uiManager.ShowTopBar (true);
+//		uiManager.ShowTopBar (true);
 	}
 
 	/// <summary>
@@ -63,7 +91,7 @@ public class GameController : MonoBehaviour {
 	/// </summary>
 	public void OnShutterClose()
 	{
-			
+
 	}
 
 	/// <summary>
@@ -72,6 +100,7 @@ public class GameController : MonoBehaviour {
 	/// <param name="gender">Gender.</param>
 	public void OnGenderSelection(EGender gender)
 	{
+		Gender = gender;
 		uiManager.OnGenderSelection (gender);
 	}
 
@@ -97,20 +126,21 @@ public class GameController : MonoBehaviour {
 	}
 
 	/// <summary>
-	/// Raises the category selection animation end event.
+	/// Raises the scale event.
 	/// </summary>
-	public void OnCategorySelectionAnimationEnd()
+	/// <param name="value">Value.</param>
+	public void OnScale(EScale value)
 	{
-		uiManager.ShowGarmentSelection (true);
-		resourceManager.ShowGarments (true);
+		fittingRoomSample.OnScale (value);
 	}
 
 	/// <summary>
-	/// Raises the start gesture recognized event.
+	/// Raises the category selection animation end event.
 	/// </summary>
-	public void OnStartGestureRecognized()
+	public void OnGenderSelectionAnimationEnd()
 	{
-		uiManager.OnStartGestureRecognized ();
+		uiManager.ShowGarmentSelection (true);
+		resourceManager.ShowHanger (true);
 	}
 
 	/// <summary>
@@ -119,6 +149,7 @@ public class GameController : MonoBehaviour {
 	public void OnBackButton()
 	{
 		fittingRoomSample.ResetSelectedCloth ();
+		resourceManager.ShowHanger (true);
 		uiManager.OnBackButton ();
 	}
 }

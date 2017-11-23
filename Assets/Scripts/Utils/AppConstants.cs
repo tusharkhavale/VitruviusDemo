@@ -24,10 +24,16 @@ public enum ECategory
 
 public enum EGarment
 {
-	ONE,
-	TWO,
-	THREE,
-	FOUR,
+	ONE = 1,
+	TWO = 2,
+	THREE = 3,
+	FOUR = 4,
+}
+
+public enum EScale
+{
+	INCREMENT,
+	DECREMENT
 }
 
 public class AppConstants 

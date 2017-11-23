@@ -1,24 +1,31 @@
 ﻿using LightBuzz.Vitruvius.Avateering;
+using UnityEngine;
 
 public class TShirt : AvatarCloth
 {
 
 
-//	void Start()
-//	{
-//		Initialize ();
-//	}
+	void Start()
+	{
+		Initialize ();
+	}
 
     public override void OnUpdate()
     {
-        UpdateBone(Avateering.SpineBase);
+
+		if (!updateJoints) 
+		{
+			return;
+		}
+
+
+		UpdateBone(Avateering.ShoulderLeft);
+		UpdateBone(Avateering.ElbowLeft);
+		UpdateBone(Avateering.ShoulderRight);
+		UpdateBone(Avateering.ElbowRight);	
+		UpdateBone(Avateering.SpineBase);
         UpdateBone(Avateering.SpineMid);
         UpdateBone(Avateering.Neck);
-
-        UpdateBone(Avateering.ShoulderLeft);
-        UpdateBone(Avateering.ElbowLeft);
-
-        UpdateBone(Avateering.ShoulderRight);
-        UpdateBone(Avateering.ElbowRight);
+        
     }
 }

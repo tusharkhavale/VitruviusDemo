@@ -11,7 +11,8 @@ public class UIManager : MonoBehaviour {
 	private CategorySelectionController categorySelector;
 	private GarmentSelectionController garmentSelectionController;
 	private SpriteManager spriteManager;
-	private GameObject startPage;
+	private GameObject scale;
+	public StartPage startPage;
 
 	/// <summary>
 	/// Returns the instance.
@@ -40,12 +41,13 @@ public class UIManager : MonoBehaviour {
 	void Start()
 	{
 		LoadReferences ();
+		AddDelegates ();
 	}
 
 	/// <summary>
 	/// Loads the references from Hierarchy.
 	/// </summary>
-	void LoadReferences()
+	private void LoadReferences()
 	{
 		shutter = transform.Find ("Shutter").GetComponent<Shutter> ();
 		btnShutter = transform.Find ("ShutterButton").GetComponent<ShutterButton> ();
@@ -53,8 +55,17 @@ public class UIManager : MonoBehaviour {
 		genderSelection = transform.Find ("GenderSelection").gameObject.GetComponent<GenderSelectionController>();
 		categorySelector = transform.Find ("CategorySelector").gameObject.GetComponent<CategorySelectionController>();
 		spriteManager = transform.GetComponent<SpriteManager> ();
-		startPage = transform.Find ("StartPage").gameObject;
 		garmentSelectionController = transform.Find ("GarmentSelector").GetComponent<GarmentSelectionController> ();
+		startPage = transform.Find ("StartPage").GetComponent<StartPage>();
+		scale = transform.Find ("Scale").gameObject;
+	}
+
+	/// <summary>
+	/// Adds the delegates.
+	/// </summary>
+	private void AddDelegates()
+	{
+		startPage.AddStartDelegate (this.OnStartGestureRecognized);
 	}
 
 	/// <summary>
@@ -94,6 +105,8 @@ public class UIManager : MonoBehaviour {
 	/// <param name="value">If set to <c>true</c> value.</param>
 	public void ShowGenderSelection(bool value)
 	{
+		if(value)
+			ShowTopBar (value);
 		genderSelection.gameObject.SetActive (value);
 		genderSelection.ShowGenderSelection ();
 	}
@@ -147,9 +160,9 @@ public class UIManager : MonoBehaviour {
 	/// <param name="garment">Garment.</param>
 	public void OnGarmentSelection(EGarment garment)
 	{
-//		garmentSelectionController.OnClickButton (garment);
 		ShowGarmentSelection(false);
 		topBar.ShowBackButton (true);
+		topBar.ShowScaleButton (true);
 	}
 
 
@@ -159,7 +172,7 @@ public class UIManager : MonoBehaviour {
 	/// <param name="value">If set to <c>true</c> value.</param>
 	public void ShowStartPage(bool value)
 	{
-		startPage.SetActive (value);
+		startPage.gameObject.SetActive (value);
 	}
 
 	/// <summary>
@@ -178,8 +191,21 @@ public class UIManager : MonoBehaviour {
 	public void OnBackButton()
 	{
 		ShowGarmentSelection (true);
+		topBar.ShowScaleButton (false);
 	}
 
+	/// <summary>
+	/// Shows the scale.
+	/// </summary>
+	public void ShowScale(bool value)
+	{
+		scale.SetActive(value);
+	}
+
+	public void ShowTopBarButtons()
+	{
+		topBar.ShowTopBarButtons (true);
+	}
 
 	public bool open;
 	public bool close;
@@ -189,13 +215,13 @@ public class UIManager : MonoBehaviour {
 		{
 			open = false;
 			UpdateShutter (true);
-			ShowTopBar (true);
+//			ShowTopBar (true);
 		}
 
 		if (close) 
 		{
 			close = false;
-			ShowTopBar (false);
+//			ShowTopBar (false);
 			UpdateShutter (false);
 		}
 	}

@@ -23,7 +23,9 @@ public class AvatarCloth : FBX
     }
 
     public float colorScaleFactor;
-    public float depthScaleFactor;
+	public float depthScaleFactor;
+	public Transform spineBase;
+	public bool updateJoints = true;
 
     #endregion
 

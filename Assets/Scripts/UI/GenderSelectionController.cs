@@ -13,7 +13,6 @@ public class GenderSelectionController : MonoBehaviour {
 		femaleSelector = transform.Find ("FEMALE");
 	}
 
-
 	public void ShowGenderSelection()
 	{
 		maleSelector.GetComponent<Animator> ().enabled = true;

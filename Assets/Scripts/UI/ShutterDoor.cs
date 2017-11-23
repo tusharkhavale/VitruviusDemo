@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class ShutterDoor : MonoBehaviour {
 
+	/// <summary>
+	/// Raises the animation end event.
+	/// </summary>
 	public void OnAnimationEnd()
 	{
-		transform.GetComponentInParent<Shutter> ().OnAnimationEnd ();
+		transform.GetComponentInParent<Shutter> ().OnShutterOpneAnimationEnd ();
 	}
 }
