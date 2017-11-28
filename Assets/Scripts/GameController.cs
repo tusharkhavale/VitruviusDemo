@@ -62,27 +62,41 @@ public class GameController : MonoBehaviour {
 		uiManager = UIManager.GetInstance ();
 		resourceManager = ResourceManager.GetInstance ();
 		fittingRoomSample = FittingRoomSample.GetInstance ();
-		fittingRoomSample.AddDelegate (this.OnBodyFrameReceived);
+		fittingRoomSample.AddBodyFrameReceivedDelegate (this.OnBodyFrameReceived);
+		fittingRoomSample.AddBodyFrameNotAvailableDelegate (this.OnBodyFrameNotAvailable);
 	}
 
 	/// <summary>
 	/// Raises the body frame received event.
 	/// </summary>
-	public void OnBodyFrameReceived()
+	private void OnBodyFrameReceived()
 	{
 		if (!shutterState) 
 		{
 			shutterState = true;
-			OnShutterOpen ();
+			OpenShutter(true);
 		}
 	}
 
 	/// <summary>
+	/// Raises the body frame not available event.
+	/// </summary>
+	private void OnBodyFrameNotAvailable()
+	{
+		if (shutterState) 
+		{
+			shutterState = false;
+			OpenShutter (false);
+		}
+	}
+
+
+	/// <summary>
 	/// Raises the shutter open event.
 	/// </summary>
-	public void OnShutterOpen()
+	public void OpenShutter(bool value)
 	{
-		uiManager.UpdateShutter (true);
+		uiManager.UpdateShutter (value);
 //		uiManager.ShowTopBar (true);
 	}
 

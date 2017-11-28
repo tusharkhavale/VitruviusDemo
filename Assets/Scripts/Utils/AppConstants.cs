@@ -36,8 +36,23 @@ public enum EScale
 	DECREMENT
 }
 
+
+public enum UIState
+{
+	LOGIN_SCREEN,
+	ADMIN_SCREEN,
+	SETTINGS_SCREEN,
+}
+
+
+public enum PopUpState
+{
+	SYNC,
+}
+
 public class AppConstants 
 {
-	
+	public const float SPINNER_ANGLE = 45f;
+	public const float SPINNER_DELAY = 0.1f;
 
 }

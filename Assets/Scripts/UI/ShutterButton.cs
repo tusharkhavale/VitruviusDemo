@@ -23,7 +23,7 @@ public class ShutterButton : KinectButton
 	/// </summary>
 	void OnGaugeEnd()
 	{
-		GameController.GetInstance ().OnShutterOpen ();
+		GameController.GetInstance ().OpenShutter (true);
 	}
 
 	public void OnMouseDown()

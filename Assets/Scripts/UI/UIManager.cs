@@ -76,8 +76,8 @@ public class UIManager : MonoBehaviour {
 		if (shutter != null)
 			shutter.UpdateShutter (value);
 
-		if (btnShutter != null)
-			btnShutter.gameObject.SetActive (!value);
+//		if (btnShutter != null)
+//			btnShutter.gameObject.SetActive (!value);
 	}
 
 	/// <summary>

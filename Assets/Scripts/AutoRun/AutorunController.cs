@@ -46,7 +46,7 @@ public class AutorunController : MonoBehaviour {
 		uiManager = UIManager.GetInstance ();
 		resourceManager = ResourceManager.GetInstance ();
 		fittingRoomSample = FittingRoomSample.GetInstance ();
-		fittingRoomSample.AddDelegate (this.OnBodyFrameReceived);
+		fittingRoomSample.AddBodyFrameReceivedDelegate (this.OnBodyFrameReceived);
 	}
 
 	/// <summary>

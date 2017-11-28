@@ -21,9 +21,9 @@ public class Shutter : MonoBehaviour {
 	{
 		LoadReferences ();
 		Application.runInBackground = true;
-		StartCoroutine(playVideo(shutter[0],videoToPlay));
+//		StartCoroutine(playVideo(shutter[0],videoToPlay));
 		StartCoroutine(playVideo(shutter[1],videoToPlay1));
-		StartCoroutine(playVideo(shutter[2],videoToPlay2));
+//		StartCoroutine(playVideo(shutter[2],videoToPlay2));
 	}
 
 	/// <summary>
@@ -46,14 +46,15 @@ public class Shutter : MonoBehaviour {
 		uiManager.ShowCategorySelector (false);
 		uiManager.ShowGenderSelection (false);
 		uiManager.ShowScale (false);
-		for (int i = 0; i < shutter.Length; i++) 
+//		for (int i = 0; i < shutter.Length; i++) 
 		{
+			int i = 1;
 			shutter [i].GetComponent<Animator> ().SetBool ("open", value);
-			if (value) 
-			{
-				shutter [i].GetComponent<VideoPlayer> ().Stop ();
-				shutter [i].GetComponent<VideoPlayer> ().enabled = false;
-			}
+//			if (value) 
+//			{
+//				shutter [i].GetComponent<VideoPlayer> ().Stop ();
+//				shutter [i].GetComponent<VideoPlayer> ().enabled = false;
+//			}
 			
 		}
 	}
